@@ -25,18 +25,20 @@ buttonDivi.onclick = function(){
     action='/'
 }
 
+function chooseAction(inp1, inp2, symbol){
+    const num1 = Number(inp1.value)
+    const num2 = Number(inp2.value)
+    if(symbol == '+'){
+        return num1+num2
+    }else if(symbol == '-'){
+        return num1-num2
+    }else if(symbol == '*'){
+        return num1*num2
+    }else if(symbol == '/'){
+        return num1/num2
+    }
+}
 button.onclick = function(){
-    if (action == '+'){
-        resultElement.textContent = Number(input1.value) + Number(input2.value)
-    }
-    if (action == '-'){
-        resultElement.textContent = Number(input1.value) - Number(input2.value)
-    }
-    if (action == '*'){
-        resultElement.textContent = Number(input1.value) * Number(input2.value)
-    }
-    if (action == '/'){
-        resultElement.textContent = Number(input1.value) / Number(input2.value)
-     }
+    resultElement.textContent = chooseAction(input1, input2, action)
 }
 
