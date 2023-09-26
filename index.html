@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Калькулятор</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="practice.js" defer></script>
+    </head>
+    <body class="bg-black">
+        <div class="wrapper">
+            <div class="input_container">
+                <h1 class="title">Калькулятор</h1>
+                <div class="input_wrapper">
+                    <input type="number"
+                    placeholder="Введите 1 число"
+                    id="input_1" />
+                    <input type="number"
+                    placeholder="Введите 2 число"
+                    id="input_2"
+                    />
+                </div>
+                <div class="but_wrapper">
+                    <button id="plus"  class="bub">+</button>
+                    <button id="minuse" class="bub">-</button>
+                    <button id="multiplie" class="bub">*</button>
+                    <button id="divided" class="bub">/</button>
+                    <button id="submit"  class="bub">Вычислить</button>
+                </div> 
+            </div>
+            <div class="result_container">
+                <h2 class="title_result">Результат</h2>
+                <p id="result"></p>
+            </div>
+        </div>
+    </body>
+</html>
