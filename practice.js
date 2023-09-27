@@ -6,6 +6,7 @@ const buttonPlus = document.getElementById('plus')
 const buttonMin = document.getElementById('minuse')
 const buttonMult = document.getElementById('multiplie')
 const buttonDivi = document.getElementById('divided')
+const resultsList = document.getElementById('list_results')
 
 let action = '-'
 
@@ -39,6 +40,13 @@ function chooseAction(inp1, inp2, symbol){
     }
 }
 button.onclick = function(){
+    
     resultElement.textContent = chooseAction(input1, input2, action)
+    // resultsList.innerHTML = `<li class="result_calculation">
+    // <span>${resultElement.textContent}</span></li>
+    // `
+    resultsList.insertAdjacentHTML('afterbegin', `<li class="result_calculation">
+                                                  <span>${input1.value+action+input2.value+'='+resultElement.textContent}</span></li> `)
+
 }
 
